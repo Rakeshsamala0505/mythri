@@ -141,12 +141,12 @@ nav .wrapper {
     justify-content: space-between; /* Aligns items to space out */
     align-items: center;
     width: 100%;
-    padding: 0 0px; /* Adds padding for spacing */
+    padding: 0 40px; /* Adds padding for spacing */
   }
   .wrapper .btn {
     display: block;
     position: relative;
-    left: 90%; /* Ensures it's aligned to the left */
+    left: 10%; /* Ensures it's aligned to the left */
   }
   .wrapper .logo {
     margin-left: 10px; /* Optional: Adjust logo spacing */
