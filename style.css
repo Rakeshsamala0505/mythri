@@ -20,7 +20,7 @@ nav .wrapper {
   margin: auto;
   display: flex;
   align-items: center;
-  justify-content:space-between;
+  justify-content: center;
 }
 .wrapper .logo a {
   color: #f2f2f2;
@@ -35,7 +35,7 @@ nav .wrapper {
   list-style: none;
 }
 .nav-links li a {
-  color: #f2f2f2;
+  color: #ffffff;
   text-decoration: none;
   font-size: 13px;
   font-weight: 500;
@@ -57,12 +57,13 @@ nav .wrapper {
   top: 72px;
   opacity: 0;
   visibility: hidden;
+  overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
   max-height: 0;
   z-index: 1000;
   padding: 0px;
   width: 200px; /* Default width */
-  transition: opacity 0.5s ease, visibility 1.5s ease, max-height 2s ease;
+  transition: max-height 0.7s ease-in-out, opacity 0s ease-in-out;
 }
 .nav-links li:hover .drop-menu,
 .nav-links li:hover .mega-box {
@@ -140,11 +141,12 @@ nav .wrapper {
     justify-content: space-between; /* Aligns items to space out */
     align-items: center;
     width: 100%;
-    padding: 0 0px; /* Adds padding for spacing */
+    padding: 0 40px; /* Adds padding for spacing */
   }
   .wrapper .btn {
     display: block;
     position: relative;
+    left: 90%; /* Ensures it's aligned to the left */
   }
   .wrapper .logo {
     margin-left: 10px; /* Optional: Adjust logo spacing */
@@ -153,7 +155,7 @@ nav .wrapper {
     position: fixed;
     height: 100vh;
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
     top: 0;
     left: -100%;
     background: #242526;
