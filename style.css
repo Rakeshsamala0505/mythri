@@ -146,6 +146,7 @@ nav .wrapper {
   .wrapper .btn {
     display: block;
     position: relative;
+    padding-left:80%;
   }
   .wrapper .logo {
     margin-left: 10px; /* Optional: Adjust logo spacing */
