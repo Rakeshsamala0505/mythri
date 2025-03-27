@@ -20,7 +20,7 @@ nav .wrapper {
   margin: auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content:space-between;
 }
 .wrapper .logo a {
   color: #f2f2f2;
@@ -140,12 +140,11 @@ nav .wrapper {
     justify-content: space-between; /* Aligns items to space out */
     align-items: center;
     width: 100%;
-    padding: 0 40px; /* Adds padding for spacing */
+    padding: 0 0px; /* Adds padding for spacing */
   }
   .wrapper .btn {
     display: block;
     position: relative;
-    left: 70%; /* Ensures it's aligned to the left */
   }
   .wrapper .logo {
     margin-left: 10px; /* Optional: Adjust logo spacing */
