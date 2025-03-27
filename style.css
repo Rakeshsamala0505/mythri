@@ -132,8 +132,9 @@ nav .wrapper {
 }
 .wrapper .btn.close-btn {
   position: absolute;
-  left: 70%;
+  left: 0%;
   top: 10px;
+  padding-left:14rem;
 }
 @media screen and (max-width: 970px) {
   .wrapper .btn {
@@ -146,7 +147,7 @@ nav .wrapper {
   .wrapper .btn {
     display: block;
     position: relative;
-    padding-left:80%;
+    padding-left:18rem;
   }
   .wrapper .logo {
     margin-left: 10px; /* Optional: Adjust logo spacing */
