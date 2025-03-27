@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Mega Menu | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <nav class="d-flex justify-content-center align-items-center">
+    <div class="wrapper">
+      <input type="radio" name="slider" id="menu-btn">
+      <input type="radio" name="slider" id="close-btn">
+      <ul class="nav-links">
+        <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+        <li><a href="#"><i class="fas fa-home"></i></a></li>
+        
+        <li>
+          <a href="#" class="desktop-item">aharishi</a>
+          <input type="checkbox" id="showDrop1" class="dropdown-toggle">
+          <label for="showDrop1" class="mobile-item">aharishi &nbsp;<i class="fa fa-caret-down"></i></label>
+          <ul class="drop-menu">
+            <li><a href="#" class="subheader">Purpose of Maharishi</a></li>
+            <li><a href="#" class="subheader">Genesis</a></li>
+            <li><a href="#" class="subheader">G20 and MAHARISHI</a></li>
+            <li><a href="#" class="subheader">Implementation of MAHARISHI</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" class="desktop-item">About</a>
+          <input type="checkbox" id="showDrop2" class="dropdown-toggle">
+          <label for="showDrop2" class="mobile-item">About &nbsp;<i class="fa fa-caret-down"></i></label>
+          <ul class="drop-menu">
+            <li><a href="#" class="subheader">Structure</a></li>
+            <li><a href="#" class="subheader">Expert Working Groups</a></li>
+            <li><a href="#" class="subheader">Charter</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="desktop-item">Millets</a>
+          <input type="checkbox" id="showDrop3" class="dropdown-toggle">
+          <label for="showDrop3" class="mobile-item">Millets &nbsp;<i class="fa fa-caret-down"></i></label>
+          <ul class="drop-menu">
+            <li><a href="#" class="subheader">Millets</a></li>
+            <li><a href="#" class="subheader">Ancient Grains</a></li>
+          </ul>
+        </li><li>
+          <a href="#" class="desktop-item">Millet Initiative</a>
+          <input type="checkbox" id="showDrop4" class="dropdown-toggle">
+          <label for="showDrop4" class="mobile-item">Millet Initiative &nbsp;<i class="fa fa-caret-down"></i></label>
+          <ul class="drop-menu">
+            <li><a href="#" class="subheader">Sustainale Farming</a></li>
+            <li><a href="#" class="subheader">Nutrition Benefits</a></li>
+          </ul>
+        </li><li>
+          <a href="#" class="desktop-item">Publications</a>
+          <input type="checkbox" id="showDrop5" class="dropdown-toggle">
+          <label for="showDrop5" class="mobile-item">Publications &nbsp;<i class="fa fa-caret-down"></i></label>
+          <ul class="drop-menu">
+            <li><a href="#" class="subheader">IIMR Research reports</a></li>
+            <li><a href="#" class="subheader">Annual Reports</a></li>
+          </ul>
+        </li><li>
+          <a href="#" class="desktop-item">Media</a>
+          <input type="checkbox" id="showDrop6" class="dropdown-toggle">
+          <label for="showDrop6" class="mobile-item">Media &nbsp;<i class="fa fa-caret-down"></i></label>
+          <ul class="drop-menu">
+            <li><a href="#" class="subheader">Newsletter</a></li>
+            <li><a href="#" class="subheader">Pres Releases</a></li>
+            <li><a href="#" class="subheader">Gallery</a></li>
+          </ul>
+        </li>
+        
+        <!-- Add more sections as needed -->
+        
+      </ul>
+      <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+    </div>
+  </nav>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuBtn = document.getElementById("menu-btn");
+        const closeBtn = document.getElementById("close-btn");
+        const navLinks = document.querySelectorAll(".nav-links li a");
+        const subHeaders = document.querySelectorAll(".subheader");
+        const sidebar = document.querySelector(".nav-links");
+        const dropdowns = document.querySelectorAll(".dropdown-toggle");
+
+        // Close sidebar when clicking on a menu item or subheader
+        [...navLinks, ...subHeaders].forEach(link => {
+            link.addEventListener("click", function () {
+                menuBtn.checked = false; 
+                closeBtn.checked = true; 
+            });
+        });
+
+        // Close sidebar when clicking outside of it
+        document.addEventListener("click", function (event) {
+            if (!sidebar.contains(event.target) && !menuBtn.contains(event.target)) {
+                menuBtn.checked = false;
+                closeBtn.checked = true;
+            }
+        });
+
+        // Close other dropdowns when opening a new one
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener("change", function () {
+                dropdowns.forEach(other => {
+                    if (other !== this) other.checked = false;
+                });
+            });
+        });
+    });
+  </script>
+</body>
+</html>
