@@ -141,7 +141,7 @@ nav .wrapper {
     justify-content: space-between; /* Aligns items to space out */
     align-items: center;
     width: 100%;
-    padding: 0 20px; /* Adds padding for spacing */
+    padding: 0 0px; /* Adds padding for spacing */
   }
   .wrapper .btn {
     display: block;
