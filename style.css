@@ -134,7 +134,7 @@ nav .wrapper {
   position: absolute;
   left: 0%;
   top: 10px;
-  padding-left:14rem;
+  padding-left:15rem;
 }
 @media screen and (max-width: 970px) {
   .wrapper .btn {
