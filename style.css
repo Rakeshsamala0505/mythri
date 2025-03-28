@@ -154,7 +154,7 @@ nav .wrapper {
   }
   .wrapper .nav-links {
     position: fixed;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     max-width: 17rem;
     top: 0;
@@ -162,7 +162,7 @@ nav .wrapper {
     background: #242526;
     display: block;
     padding: 50px 10px;
-    line-height: 50px;
+    line-height: 40px;
     overflow-y: auto;
     box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
     transition: all 0.3s ease;
