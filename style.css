@@ -147,7 +147,7 @@ nav .wrapper {
   .wrapper .btn {
     display: block;
     position: relative;
-    padding-left:18rem;
+    padding-left:20rem;
   }
   .wrapper .logo {
     margin-left: 10px; /* Optional: Adjust logo spacing */
@@ -156,7 +156,7 @@ nav .wrapper {
     position: fixed;
     height: 100vh;
     width: 100%;
-    max-width: 300px;
+    max-width: 17rem;
     top: 0;
     left: -100%;
     background: #242526;
@@ -252,7 +252,7 @@ nav .wrapper {
   }
   .drop-menu li a {
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 12px;
     color: #7bb036;
   }
   .mega-box {
