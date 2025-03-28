@@ -250,6 +250,7 @@ nav .wrapper {
   }
   .drop-menu li {
     margin: 0;
+    line-height:2rem;
   }
   .drop-menu li a {
     border-radius: 5px;
