@@ -245,7 +245,7 @@ nav .wrapper {
     transition: all 0.3s ease;
   }
   .nav-links .mobile-item:hover {
-    background: #3A3B3C;
+    background: #0582ff;
   }
   .drop-menu li {
     margin: 0;
@@ -253,6 +253,7 @@ nav .wrapper {
   .drop-menu li a {
     border-radius: 5px;
     font-size: 14px;
+    color: #7bb036;
   }
   .mega-box {
     position: static;
@@ -278,10 +279,7 @@ nav .wrapper {
   .mega-box .content .row:nth-child(2) {
     border-top: 0px;
   }
-  .content .row .mega-links {
-    border-left: 0px;
-    padding-left: 15px;
-  }
+  
   .row .mega-links li {
     margin: 0;
   }
@@ -296,7 +294,6 @@ nav input {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
   padding: 0 30px;
