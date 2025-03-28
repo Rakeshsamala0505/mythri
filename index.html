@@ -82,38 +82,51 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const menuBtn = document.getElementById("menu-btn");
-        const closeBtn = document.getElementById("close-btn");
-        const navLinks = document.querySelectorAll(".nav-links li a");
-        const subHeaders = document.querySelectorAll(".subheader");
-        const sidebar = document.querySelector(".nav-links");
-        const dropdowns = document.querySelectorAll(".dropdown-toggle");
-
-        // Close sidebar when clicking on a menu item or subheader
-        [...navLinks, ...subHeaders].forEach(link => {
-            link.addEventListener("click", function () {
-                menuBtn.checked = false; 
-                closeBtn.checked = true; 
-            });
-        });
-
-        // Close sidebar when clicking outside of it
-        document.addEventListener("click", function (event) {
-            if (!sidebar.contains(event.target) && !menuBtn.contains(event.target)) {
-                menuBtn.checked = false;
-                closeBtn.checked = true;
-            }
-        });
-
-        // Close other dropdowns when opening a new one
-        dropdowns.forEach(dropdown => {
-            dropdown.addEventListener("change", function () {
-                dropdowns.forEach(other => {
-                    if (other !== this) other.checked = false;
-                });
-            });
-        });
-    });
+      const menuBtn = document.getElementById("menu-btn");
+      const closeBtn = document.getElementById("close-btn");
+      const sidebar = document.querySelector(".nav-links");
+      const dropdowns = document.querySelectorAll(".dropdown-toggle");
+  
+      // Close sidebar when clicking a menu item or subheader
+      sidebar.addEventListener("click", function (event) {
+          if (event.target.matches("a, .subheader")) {
+              menuBtn.checked = false;
+              closeBtn.checked = true;
+          }
+      });
+  
+      // Close sidebar when clicking outside of it
+      document.addEventListener("click", function (event) {
+          if (!sidebar.contains(event.target) && event.target !== menuBtn) {
+              menuBtn.checked = false;
+              closeBtn.checked = true;
+          }
+      });
+  
+      // Ensure only one dropdown remains open at a time (with instant closing)
+      dropdowns.forEach(dropdown => {
+          dropdown.addEventListener("click", function (event) {
+              event.stopPropagation(); // Prevent closing the clicked dropdown
+  
+              // Instantly close all other dropdowns
+              dropdowns.forEach(other => {
+                  if (other !== this) {
+                      other.checked = false; // Close immediately
+                  }
+              });
+          });
+      });
+  
+      // Close dropdowns when clicking outside
+      document.addEventListener("click", function (event) {
+          if (!event.target.closest(".dropdown-toggle")) {
+              dropdowns.forEach(dropdown => {
+                  dropdown.checked = false; // Close immediately
+              });
+          }
+      });
+  });
+  
   </script>
 </body>
 </html>
